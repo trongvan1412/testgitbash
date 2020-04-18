@@ -11,7 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
+    
+    private static final String TAG = "FoodListview";
     ListView lv_food;
     ArrayList<Food> listFood;
 
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         lv_food = (ListView) findViewById(R.id.lv_food);
-
+        
         addData();
         CustomAdapter adapter = new CustomAdapter(this,R.layout.item_food,listFood);
         lv_food.setAdapter(adapter);
